@@ -49,7 +49,7 @@ Crea además un objeto que pertenece a la clase Stack. Este último es una estru
         // TODO: Realiza la evaluación de la expresión en formato postfijo
         for(int i=0;i<expresion.size();i++){
             if(isNumeric(expresion.get(i))){
-                pila.add(Integer.parseInt(expresion.get(i)));
+                pila.push(Integer.parseInt(expresion.get(i)));
             }
             else{
                 int ultimo=pila.pop();
@@ -57,19 +57,19 @@ Crea además un objeto que pertenece a la clase Stack. Este último es una estru
                 switch (expresion.get(i)){
                     case "+":
                         int resultado=penultimo+ultimo;
-                        pila.add(resultado);
+                        pila.push(resultado);
                         break;
                     case "-":
                         resultado=penultimo-ultimo;
-                        pila.add(resultado);
+                        pila.push(resultado);
                         break;
                     case "*":
                         resultado=penultimo*ultimo;
-                        pila.add(resultado);
+                        pila.push(resultado);
                         break;
                     case "/":
                         resultado=penultimo/ultimo;
-                        pila.add(resultado);
+                        pila.push(resultado);
                         break;
                     default:
                         break;
